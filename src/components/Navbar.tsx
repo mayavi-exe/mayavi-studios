@@ -42,9 +42,9 @@ export default function Navbar() {
           <motion.span 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="text-xl font-display tracking-tighter text-ghost"
+            className="text-xl font-display tracking-tighter text-ghost group-hover:text-glow-biolu transition-all"
           >
-            MAYAVI<span className="text-biolu group-hover:text-electric transition-colors duration-500">.</span>
+            MAYAVI<span className="text-biolu group-hover:text-glow-electric transition-colors duration-500">.</span>
           </motion.span>
         </Link>
 
@@ -91,7 +91,7 @@ export default function Navbar() {
             initial="closed"
             animate="open"
             exit="closed"
-            className="fixed inset-0 z-[99] bg-obsidian/95 backdrop-blur-2xl flex flex-col justify-center items-center"
+            className="fixed inset-0 z-[99] bg-atmosphere/95 backdrop-blur-2xl flex flex-col justify-center items-center"
           >
             <div className="absolute inset-0 noise-bg opacity-10 pointer-events-none" />
             
@@ -107,8 +107,8 @@ export default function Navbar() {
                     to={link.href}
                     onClick={() => setIsOpen(false)}
                     className={cn(
-                      "text-5xl md:text-8xl font-display tracking-tighter transition-all duration-500 hover:text-biolu",
-                      location.pathname === link.href ? "text-ghost pt-2" : "text-muted-gray"
+                      "text-5xl md:text-8xl font-display tracking-tighter transition-all duration-500 hover:text-biolu hover:text-glow-biolu",
+                      location.pathname === link.href ? "text-ghost pt-2 text-glow-biolu" : "text-muted-gray"
                     )}
                   >
                     {link.name}

@@ -34,8 +34,8 @@ function Scene() {
     <>
       <ambientLight intensity={0.5} />
       <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={1} castShadow />
-      <pointLight position={[-10, -10, -10]} intensity={0.5} color="#7B2CBF" />
-      <pointLight position={[10, 10, 10]} intensity={1.5} color="#48CAE4" />
+      <pointLight position={[-10, -10, -10]} intensity={1} color="#BC00FF" />
+      <pointLight position={[10, 10, 10]} intensity={2} color="#00F0FF" />
       <Blob />
     </>
   );

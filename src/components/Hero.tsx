@@ -26,7 +26,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative h-screen w-full flex flex-col justify-center items-center overflow-hidden bg-obsidian">
+    <section className="relative h-screen w-full flex flex-col justify-center items-center overflow-hidden bg-transparent">
       <CanvasBackground />
       
       <motion.div
@@ -38,13 +38,13 @@ export default function Hero() {
         <div className="overflow-hidden flex flex-col items-center">
           <motion.h1
             variants={itemVariants}
-            className="text-[20vw] lg:text-[22vw] leading-[0.8] text-center font-display tracking-tighter"
+            className="text-[20vw] lg:text-[22vw] leading-[0.8] text-center font-display tracking-tighter bg-clip-text text-transparent bg-gradient-to-b from-ghost via-ghost to-biolu/50 text-glow-biolu"
           >
             MAYAVI
           </motion.h1>
           <motion.p
             variants={itemVariants}
-            className="text-center font-display text-sm md:text-xl lg:text-3xl tracking-[0.3em] md:tracking-[0.5em] text-biolu mt-2 md:mt-4"
+            className="text-center font-display text-sm md:text-xl lg:text-3xl tracking-[0.3em] md:tracking-[0.5em] text-biolu mt-2 md:mt-4 text-glow-biolu"
           >
             ARCHITECTS OF DIGITAL ILLUSION
           </motion.p>
@@ -64,9 +64,9 @@ export default function Hero() {
           <div className="flex items-center space-x-4">
             <motion.button
               variants={itemVariants}
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(0, 240, 255, 0.6)' }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-3 bg-ghost text-obsidian rounded-full font-display text-sm tracking-tighter hover:bg-biolu hover:text-ghost transition-all duration-500 interactive"
+              className="px-8 py-3 bg-gradient-to-r from-biolu to-electric text-obsidian rounded-full font-display text-sm tracking-tighter hover:brightness-110 transition-all duration-500 interactive neon-border-biolu vibrate"
             >
               INITIATE SEQUENCE
             </motion.button>
@@ -76,7 +76,7 @@ export default function Hero() {
 
       {/* Static gradient overlays for depth */}
       <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-obsidian to-transparent z-10" />
-      <div className="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-t from-obsidian via-obsidian/50 to-transparent z-10" />
+      <div className="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-t from-obsidian via-obsidian/20 to-transparent z-10" />
     </section>
   );
 }

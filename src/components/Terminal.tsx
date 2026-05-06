@@ -50,17 +50,17 @@ export default function Terminal() {
         >
           <div className="flex-1 overflow-y-auto space-y-2 mb-4 scrollbar-hide">
             {logs.map((log, i) => (
-              <div key={i} className={log.startsWith('>') ? 'text-electric' : 'text-muted-gray'}>
+              <div key={i} className={log.startsWith('>') ? 'text-electric text-glow-electric' : 'text-muted-gray'}>
                 {log}
               </div>
             ))}
           </div>
           
-          <form onSubmit={handleCommand} className="flex items-center space-x-2">
-            <span className="text-biolu">$</span>
+          <form onSubmit={handleCommand} className="flex items-center space-x-2 border-t border-biolu/20 pt-4">
+            <span className="text-biolu text-glow-biolu font-bold">$</span>
             <input
               autoFocus
-              className="bg-transparent outline-none flex-1 text-ghost"
+              className="bg-transparent outline-none flex-1 text-biolu text-glow-biolu"
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="ENTER COMMAND..."

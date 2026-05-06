@@ -48,7 +48,11 @@ function AppContent({ loading, setLoading }: { loading: boolean; setLoading: (v:
   }, []);
 
   return (
-    <main className="relative bg-obsidian">
+    <main className="relative bg-atmosphere min-h-screen">
+      <div className="fixed inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-biolu/10 blur-[120px] rounded-full animate-pulse" />
+        <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-electric/10 blur-[150px] rounded-full animate-pulse" style={{ animationDelay: '2s' }} />
+      </div>
       <div className="noise-bg" />
       <Preloader onComplete={() => setLoading(false)} />
       <Cursor />
